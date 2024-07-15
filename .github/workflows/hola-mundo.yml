@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: check out repo codigo
         uses: actions/checkout@v4
-      - run: echo "$(cat hola_mundo.txt)"
+      - run: echo "$(cat hello_world.txt)"
