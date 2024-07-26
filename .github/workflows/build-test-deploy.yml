@@ -16,4 +16,16 @@ jobs:
       - run: npm install
       - run: npm run build
           
-        
+  test:
+    needs: build
+    runs-on: ubuntu-lastest
+
+    steps:
+      - name: checkout el repo
+        uses: actions/checkout@v4
+      - name: utiliza el node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - run: npm install
+      - run: npm test       
